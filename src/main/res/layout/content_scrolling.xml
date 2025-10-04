@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvAd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/common_padding_min"
+            android:layout_marginTop="@dimen/common_padding_min">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/common_padding_default"
+                android:layout_marginTop="@dimen/common_padding_default">
+
+                <ImageView
+                    android:id="@+id/imgCard"
+                    android:layout_width="@dimen/img_size"
+                    android:layout_height="@dimen/img_size"
+                    android:background="#DEAFA8"
+                    android:src="@drawable/cakeshop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="@dimen/common_padding_none"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/common_padding_default"
+                    android:text="@string/title_black_friday"
+                    android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imgCard"
+                    app:layout_constraintTop_toTopOf="@+id/imgCard" />
+
+                <TextView
+                    android:layout_width="@dimen/common_padding_none"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="@integer/max_lines"
+                    android:text="@string/large_description"
+                    android:textAppearance="?attr/textAppearanceBodySmall"
+                    app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+                    app:layout_constraintStart_toStartOf="@+id/tvTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/comprar"
+                    android:layout_width="@dimen/common_padding_none"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_buy"
+                    app:icon="@drawable/ic_shop_cart"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgCard" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSkip"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="@dimen/common_padding_none"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_skip"
+                    app:layout_constraintEnd_toStartOf="@+id/comprar"
+                    app:layout_constraintTop_toTopOf="@+id/comprar" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="@dimen/common_padding_min">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/img_cover_height"
+                    android:background="#66f"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTitleAlt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/common_padding_default"
+                    android:text="@string/title_black_friday"
+                    android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                    app:layout_constraintTop_toBottomOf="@id/imgUrl" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="@dimen/common_padding_x_large"
+                    android:hint="@string/hint_email"
+                    app:helperText="Required"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitleAlt">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tfEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/common_padding_default"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    android:hint="@string/hint_image_url"
+                    app:endIconMode="clear_text"
+                    app:helperText="Required"
+                    app:layout_constraintTop_toBottomOf="@+id/tilEmail">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tfUrl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textUri" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilpass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/common_padding_default"
+                    android:enabled="false"
+                    android:hint="@string/hint_pass"
+                    app:endIconMode="password_toggle"
+                    app:layout_constraintTop_toBottomOf="@+id/tilUrl">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/MaterialDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_padding_min"
+                    app:layout_constraintEnd_toStartOf="@+id/tilpass"
+                    app:layout_constraintTop_toBottomOf="@+id/tilpass" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cbEnablePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cb_enable_password"
+                    app:layout_constraintEnd_toStartOf="@+id/tilpass"
+                    app:layout_constraintTop_toBottomOf="@+id/MaterialDivider" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/swFab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sw_hide_fab"
+                    android:checked="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/cbEnablePassword"
+                    app:layout_constraintEnd_toEndOf="@+id/tilpass"
+                    app:layout_constraintTop_toTopOf="@+id/cbEnablePassword" />
+
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/cpEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:text="robinson@mail.com"
+                    app:closeIconEnabled="true"
+                    app:layout_constraintStart_toStartOf="@+id/cbEnablePassword"
+                    app:layout_constraintTop_toBottomOf="@+id/cbEnablePassword" />
+                <!--barra slider para usarse como volumen, tiene desde valueFrom| hasta
+                valueTo | en que proporcion stepSize-->
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/slVol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stepSize="0.5"
+                    android:value="7"
+                    android:valueFrom="0.0"
+                    android:valueTo="10.0"
+                    app:layout_constraintTop_toBottomOf="@id/cpEmail" />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/btgColors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    app:layout_constraintEnd_toEndOf="@+id/slVol"
+                    app:layout_constraintStart_toStartOf="@+id/slVol"
+                    app:layout_constraintTop_toBottomOf="@+id/slVol"
+                    app:singleSelection="true">
+
+                    <Button
+                        android:id="@+id/btnRed"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_red" />
+
+                    <Button
+                        android:id="@+id/btnBlue"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_blue" />
+
+                    <Button
+                        android:id="@+id/btnGreen"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_green" />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <FrameLayout
+                    android:id="@+id/containerNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/common_padding_default"
+                    android:paddingTop="@dimen/common_padding_default"
+                    android:paddingEnd="@dimen/common_padding_default"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btgColors">
+
+                    <ImageButton
+                        android:id="@+id/idNotifications"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_notifications_24"
+                        tools:ignore="MissingConstraints" />
+                </FrameLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    android:layout_marginEnd="@dimen/common_padding_default"
+                    android:text="@string/common_ok"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/containerNotifications" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

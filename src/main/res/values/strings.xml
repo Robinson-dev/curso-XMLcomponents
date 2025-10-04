@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">XML components</string>
+    <string name="title_black_friday" translatable="false">Black Friday</string>
+    <string name="large_description" translatable="false">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</string>
+    <string name="btn_buy">Comprar</string>
+    <string name="btn_skip">Skip</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_image_url">image url</string>
+    <string name="hint_pass">Password</string>
+    <string name="cb_enable_password">Enable Password</string>
+    <string name="sw_hide_fab">hide Fab</string>
+    <string name="btn_red">Red</string>
+    <string name="btn_blue">Blue</string>
+    <string name="btn_green">Green</string>
+    <string name="common_ok">OK</string>
+</resources>
